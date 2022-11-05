@@ -1,6 +1,8 @@
 import './App.css';
 import Header from './components/Header';
 import JobListComponent from './components/JobListComponent';
+import Attribution from './components/Attribution';
+
 import {useState} from 'react'
 
 function App() {
@@ -58,6 +60,7 @@ const clearFilters = () => {
     <div className="flex flex-col items-center">
         <Header filters={filters} deleteFilter={deleteFilter} clearFilters={clearFilters}></Header>
         <JobListComponent filters={filters} addFilter={addFilter}></JobListComponent>
+        <Attribution></Attribution>
     </div>
   );
 }
